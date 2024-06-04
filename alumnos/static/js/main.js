@@ -1,1 +1,0 @@
-alert("Do you want to build a snowman?")
