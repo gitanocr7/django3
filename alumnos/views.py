@@ -51,3 +51,19 @@ def alumnosAdd(request):
         obj.save()
         context = {'mensaje': "OK, datos grabados..."}
         return render(request, 'alumnos/alumnos_add.html', context)
+
+def alumnos_del(request, pk):
+    
+    context={}
+    try:
+     alumno=Alumno.objects.get(rut=pk)
+     alumno.delete()
+     mensaje='Datos Eliminados'
+     alumnos=Alumno.objects.all()
+     context={"alumnos":alumnos, "mensaje": mensaje}
+     return render(request, 'alumnos/alumnos_list.html', context)
+    except:
+     mensaje="Error, no existe el rut..."
+     alumnos=Alumno.objects.all()
+     context={"alumnos":alumnos, "mensaje": mensaje}
+     return render(request, 'alumnos/alumnos_list.html', context)

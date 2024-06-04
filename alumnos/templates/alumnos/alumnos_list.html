@@ -13,10 +13,10 @@
 <body>
     <h1>Bienvenidos Alumnos</h1>
 
-    <div id="idMensaje">
-        {% if mensaje %}
-        {{mensaje}}
-        {%endif%}
+    <div class="alert alert-primary" role="alert" id="idMensaje">
+      {% if mensaje %}
+      {{mensaje}}
+      {%endif%}
     </div>
     <div class="container">
         <div class="row">
@@ -32,6 +32,7 @@
             <th scope="col">RUN</th>
             <th scope="col">Nombre</th>
             <th scope="col">Telefono</th>
+            <th scope="col">Borrar</th>
           </tr>
         </thead>
         <tbody>
@@ -41,8 +42,8 @@
                 <td>{{alumno.rut}}</td>
                 <td>{{alumno.nombre}} {{alumno.apellido_paterno}} {{alumno.apellido_materno}}</td>
                 <td>{{alumno.telefono}}</td>
-                 {% comment %} <td><a href="{% url 'alumnos_del' pk=alumno.rut %}">Eliminar</a></td>
-                <td><a href="{% url 'alumnos_findEdit' pk=alumno.rut %}">Modificar</a></td>  {% endcomment %}
+                  <td><a href="{% url 'alumnos_del' pk=alumno.rut %}">Eliminar</a></td>
+               {% comment %} <td><a href="{% url 'alumnos_findEdit' pk=alumno.rut %}">Modificar</a></td>  {% endcomment %}
               </tr>
             
             {% endfor %}
