@@ -3407,3 +3407,140 @@ File C:\Python312\Lib\site-packages\django\contrib\auth\context_processors.py fi
 File C:\Python312\Lib\site-packages\django\contrib\staticfiles\storage.py first seen with mtime 1717770468.2061963
 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin' LIMIT 21; args=('admin',); alias=default
 (0.016) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$720000$vAwbWyDwTtlwJDDHAk0NTG$mU95SghAZpjwDYLW13U+Q0rXCdxEbMMYJzhvboP4FRE=', "last_login" = '2024-06-03 23:52:03.318225', "is_superuser" = 1, "username" = 'admin', "first_name" = '', "last_name" = '', "email" = 'admin@gmail.com', "is_staff" = 1, "is_active" = 1, "date_joined" = '2024-05-31 14:43:05.015028' WHERE "auth_user"."id" = 1; args=('pbkdf2_sha256$720000$vAwbWyDwTtlwJDDHAk0NTG$mU95SghAZpjwDYLW13U+Q0rXCdxEbMMYJzhvboP4FRE=', '2024-06-03 23:52:03.318225', True, 'admin', '', '', 'admin@gmail.com', True, True, '2024-05-31 14:43:05.015028', 1); alias=default
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\django\urls\resolvers.py", line 725, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'alumnos.urls' from 'C:\\Users\\plazavespucio\\documents\\django_pb\\django3\\alumnos\\urls.py'> (None:None) 'alumnos/'>]], 'path': 'admin'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\django\urls\resolvers.py", line 725, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'alumnos.urls' from 'C:\\Users\\plazavespucio\\documents\\django_pb\\django3\\alumnos\\urls.py'> (None:None) 'alumnos/'>]], 'path': 'admin'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'alumnos.urls' from 'C:\\Users\\plazavespucio\\documents\\django_pb\\django3\\alumnos\\urls.py'> (None:None) 'alumnos/'>
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+"GET /static/admin/css/base.css HTTP/1.1" 200 21544
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+File C:\Python312\Lib\importlib\readers.py first seen with mtime 1701998414.0
+File C:\Python312\Lib\importlib\resources\__init__.py first seen with mtime 1701998414.0
+File C:\Python312\Lib\importlib\resources\abc.py first seen with mtime 1701998414.0
+File C:\Python312\Lib\site-packages\tzdata\zoneinfo\__init__.py first seen with mtime 1717770463.820034
+File C:\Python312\Lib\importlib\resources\_adapters.py first seen with mtime 1701998414.0
+File C:\Python312\Lib\zipfile\_path\glob.py first seen with mtime 1701998416.0
+File C:\Python312\Lib\importlib\resources\readers.py first seen with mtime 1701998414.0
+File C:\Python312\Lib\importlib\resources\_legacy.py first seen with mtime 1701998414.0
+File C:\Python312\Lib\site-packages\django\contrib\admin\forms.py first seen with mtime 1717770465.1722233
+File C:\Python312\Lib\importlib\resources\_itertools.py first seen with mtime 1701998414.0
+File C:\Python312\Lib\site-packages\django\conf\locale\en\__init__.py first seen with mtime 1717770464.819027
+File C:\Python312\Lib\site-packages\django\contrib\auth\decorators.py first seen with mtime 1717770466.0379736
+File C:\Python312\Lib\site-packages\django\conf\locale\en\formats.py first seen with mtime 1717770464.8200254
+File C:\Python312\Lib\site-packages\tzdata\__init__.py first seen with mtime 1717770463.782033
+File C:\Python312\Lib\importlib\resources\_common.py first seen with mtime 1701998414.0
+File C:\Python312\Lib\site-packages\django\contrib\auth\views.py first seen with mtime 1717770466.0469768
+File C:\Python312\Lib\zipfile\__init__.py first seen with mtime 1701998416.0
+File C:\Python312\Lib\zipfile\_path\__init__.py first seen with mtime 1701998416.0
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin' LIMIT 21; args=('admin',); alias=default
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4319
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin' LIMIT 21; args=('admin',); alias=default
+(0.000) SELECT 1 AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'bjzo4ty0mieeu44tj2uwgbfn6ksxd54a' LIMIT 1; args=(1, 'bjzo4ty0mieeu44tj2uwgbfn6ksxd54a'); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('bjzo4ty0mieeu44tj2uwgbfn6ksxd54a', 'e30:1sFajX:3rEoni_ZPgLZObA9bbE2y5dgQN5fFYWEa5zxONbq5YA', '2024-06-21 14:38:23.829570'); args=('bjzo4ty0mieeu44tj2uwgbfn6ksxd54a', 'e30:1sFajX:3rEoni_ZPgLZObA9bbE2y5dgQN5fFYWEa5zxONbq5YA', '2024-06-21 14:38:23.829570'); alias=default
+(0.000) COMMIT; args=None; alias=default
+(0.015) UPDATE "auth_user" SET "last_login" = '2024-06-07 14:38:23.838570' WHERE "auth_user"."id" = 1; args=('2024-06-07 14:38:23.838570', 1); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) UPDATE "django_session" SET "session_data" = '.eJxVjEEOwiAQRe_C2pBCGUCX7nsGMsyAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hZnERSpx-t4j0SHUHfMd6a5JaXZc5yl2RB-1yapye18P9OyjYy7dG0KwQlGGwSWkiTQB6HEanKbNFj94CmFEZPNuU2ETKznG2MGQPlMX7A9h7N_8:1sFajX:YqRbKaWmsY5Hy-TlF-p8bJArYHekobVfn2VDEc9fd_M', "expire_date" = '2024-06-21 14:38:23.842570' WHERE "django_session"."session_key" = 'bjzo4ty0mieeu44tj2uwgbfn6ksxd54a'; args=('.eJxVjEEOwiAQRe_C2pBCGUCX7nsGMsyAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hZnERSpx-t4j0SHUHfMd6a5JaXZc5yl2RB-1yapye18P9OyjYy7dG0KwQlGGwSWkiTQB6HEanKbNFj94CmFEZPNuU2ETKznG2MGQPlMX7A9h7N_8:1sFajX:YqRbKaWmsY5Hy-TlF-p8bJArYHekobVfn2VDEc9fd_M', '2024-06-21 14:38:23.842570', 'bjzo4ty0mieeu44tj2uwgbfn6ksxd54a'); alias=default
+(0.000) COMMIT; args=None; alias=default
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-07 14:38:23.850574' AND "django_session"."session_key" = 'bjzo4ty0mieeu44tj2uwgbfn6ksxd54a') LIMIT 21; args=('2024-06-07 14:38:23.850574', 'bjzo4ty0mieeu44tj2uwgbfn6ksxd54a'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ("django_admin_log"."user_id" = "auth_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 1 ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=(1,); alias=default
+"GET /admin/ HTTP/1.1" 200 11471
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
